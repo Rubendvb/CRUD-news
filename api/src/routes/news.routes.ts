@@ -5,7 +5,7 @@ import * as newsCtrl from "./news.controller";
 
 router.get("/noticias", newsCtrl.getNews);
 
-router.get("/noticias/:id", newsCtrl.getNews);
+router.get("/noticias/:id", newsCtrl.getANews);
 
 router.post("/noticias", newsCtrl.createNews);
 
