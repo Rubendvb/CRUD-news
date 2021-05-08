@@ -43,6 +43,13 @@ export const deleteNews: RequestHandler = async (req, res) => {
 };
 
 export const updateNews: RequestHandler = async (req, res) => {
-  const newsUpdated = await News.findByIdAndUpdate(req.params.id, req.body);
+  const newsUpdated = await News.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+
+  if (!newsUpdated) {
+    return res.status(200).json();
+  }
+
   res.json(newsUpdated);
 };

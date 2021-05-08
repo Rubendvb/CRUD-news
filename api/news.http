@@ -19,4 +19,9 @@ Content-Type: application/json
 DELETE {{api}}/noticias/6095e950b6d1860438b21ba9
 
 ###
-PUT {{api}}/noticias/1
+PUT {{api}}/noticias/6095eaec999fa12a742ad299
+Content-Type: application/json
+
+{
+    "title": "Contrato paris neste sabado"
+}
