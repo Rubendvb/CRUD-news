@@ -15,6 +15,7 @@ const newsSchema = new Schema(
       type: String,
       requerid: true,
       trim: true,
+      unique: true,
     },
   },
   {
