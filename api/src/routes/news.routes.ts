@@ -1,6 +1,8 @@
 import { Router } from "express";
 const router = Router();
 
-router.get("/noticias", (req, res) => res.json("getting news"));
+import { getNews } from "./news.controller";
+
+router.get("/noticias", getNews);
 
 export default router;
