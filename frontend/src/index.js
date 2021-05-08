@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { NewsList } from "./News/NewsList";
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello World!</h1>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={NewsList} />
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
