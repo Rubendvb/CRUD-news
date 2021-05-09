@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { NewsList } from "./components/News/NewsList";
 import NewsForm from "./components/News/NewsForm";
+import Navbar from "./components/Navbar/Navbar";
 
 import "bootswatch/dist/simplex/bootstrap.min.css";
 import "./index.css";
@@ -13,10 +14,14 @@ import "./index.css";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={NewsList} />
-        <Route path="/new-news" component={NewsForm} />
-      </Switch>
+      <Navbar />
+
+      <div class="container">
+        <Switch>
+          <Route exact path="/" component={NewsList} />
+          <Route path="/new-news" component={NewsForm} />
+        </Switch>
+      </div>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
