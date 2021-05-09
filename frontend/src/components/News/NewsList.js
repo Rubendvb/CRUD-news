@@ -18,6 +18,7 @@ export const NewsList = () => {
       {news.map((i) => (
         <div>
           <h1>{i.title}</h1>
+          <p>{i.description}</p>
         </div>
       ))}
     </div>
