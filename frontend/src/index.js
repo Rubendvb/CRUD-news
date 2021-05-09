@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import { NewsList } from "./components/News/NewsList";
 import NewsForm from "./components/News/NewsForm";
+
+import "bootswatch/dist/simplex/bootstrap.min.css";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
