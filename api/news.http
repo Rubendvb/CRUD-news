@@ -10,9 +10,9 @@ POST {{api}}/noticias
 Content-Type: application/json
 
 {
-    "url": "https://globoesporte.globo.com/futebol/futebol-internacional/futebol-frances/noticia/neymar-assinara-renovacao-de-contrato-com-o-psg-neste-sabado-informa-jornal-frances.ghtml",
-    "title": "Neymar",
-    "description": "this is a news"
+    "url": "https://globoesporte.globo.com/rj/futebol/campeonato-carioca/noticia/finais-do-carioca-entre-flamengo-e-fluminense-serao-nos-proximos-dois-sabados-dias-14-e-21.ghtml",
+    "title": "Flamengo",
+    "description": "Final carioca"
 }
 
 ###
