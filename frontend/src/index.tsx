@@ -15,10 +15,12 @@ ReactDOM.render(
     <BrowserRouter>
       <Navbar />
 
-      <Switch>
-        <Route exact path="/" component={NewsList} />
-        <Route path="/new-news" component={NewsForm} />
-      </Switch>
+      <div className="container p-4">
+        <Switch>
+          <Route exact path="/" component={NewsList} />
+          <Route path="/new-news" component={NewsForm} />
+        </Switch>
+      </div>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
