@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import NewsList from "./components/News/NewsList";
 import NewsForm from "./components/News/NewsForm";
 import Navbar from "./components/Navbar/Navbar";
 
+import "react-toastify/dist/ReactToastify.css";
 import "bootswatch/dist/simplex/bootstrap.min.css";
 import "./index.css";
 
@@ -20,6 +22,7 @@ ReactDOM.render(
           <Route exact path="/" component={NewsList} />
           <Route path="/new-news" component={NewsForm} />
         </Switch>
+        <ToastContainer />
       </div>
     </BrowserRouter>
   </React.StrictMode>,

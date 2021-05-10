@@ -1,12 +1,19 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Report } from "./News";
+import * as newsService from "./NewsService";
+import { toast } from "react-toastify";
+// import { useHistory } from "react-router";
 
 const NewsForm = () => {
-  const [news, setNews] = useState<Report>({
+  // const history = useHistory();
+
+  const initialState = {
     title: "",
     description: "",
     url: "",
-  });
+  };
+
+  const [news, setNews] = useState<Report>(initialState);
 
   const inputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -14,9 +21,12 @@ const NewsForm = () => {
     setNews({ ...news, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(news);
+    await newsService.createNews(news);
+    toast.success("Novo vídeo adicinado");
+    setNews(initialState);
+    // history.push("/"); ---> Quando finalizar a criação de uma noticia, retorna a home
   };
 
   return (
@@ -34,6 +44,7 @@ const NewsForm = () => {
                   placeholder="Escreve o título da noticia"
                   className="form-control"
                   onChange={inputChange}
+                  value={news.title}
                   autoFocus
                 />
               </div>
@@ -45,6 +56,7 @@ const NewsForm = () => {
                   placeholder="https://google.com"
                   className="form-control"
                   onChange={inputChange}
+                  value={news.url}
                 />
               </div>
 
@@ -55,10 +67,11 @@ const NewsForm = () => {
                   className="form-control"
                   placeholder="Descrição do vídeo"
                   onChange={inputChange}
+                  value={news.description}
                 ></textarea>
               </div>
 
-              <button className="btn btn-danger mt-2">Criar Vídeo</button>
+              <button className="btn btn-danger mt-2">Criar Noticia</button>
             </form>
           </div>
         </div>

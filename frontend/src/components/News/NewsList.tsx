@@ -15,7 +15,7 @@ const NewsList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="row">
       {news.map((i) => {
         return <NewItem n={i} />;
       })}
