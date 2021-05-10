@@ -1,8 +1,8 @@
-export interface Notice {
-  createdAt: string;
-  description: string;
+export interface Report {
   title: string;
-  updateAt: string;
+  description: string;
   url: string;
-  _id: string;
+  updateAt?: string;
+  createdAt?: string;
+  _id?: string;
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import { Notice } from "./News";
+import { Report } from "./News";
 
 interface Props {
-  n: Notice;
+  n: Report;
 }
 
 const NewItem = ({ n }: Props) => {

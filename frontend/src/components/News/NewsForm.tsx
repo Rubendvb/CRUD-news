@@ -1,6 +1,24 @@
-import React from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
+import { Report } from "./News";
 
 const NewsForm = () => {
+  const [news, setNews] = useState<Report>({
+    title: "",
+    description: "",
+    url: "",
+  });
+
+  const inputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setNews({ ...news, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(news);
+  };
+
   return (
     <div className="row">
       <div className="col-md-4 offset-md-4">
@@ -8,13 +26,14 @@ const NewsForm = () => {
           <div className="card-body">
             <h3>Nova Noticia</h3>
 
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   type="text"
                   name="title"
                   placeholder="Escreve o título da noticia"
                   className="form-control"
+                  onChange={inputChange}
                   autoFocus
                 />
               </div>
@@ -25,6 +44,7 @@ const NewsForm = () => {
                   name="url"
                   placeholder="https://google.com"
                   className="form-control"
+                  onChange={inputChange}
                 />
               </div>
 
@@ -34,6 +54,7 @@ const NewsForm = () => {
                   rows={3}
                   className="form-control"
                   placeholder="Descrição do vídeo"
+                  onChange={inputChange}
                 ></textarea>
               </div>
 
