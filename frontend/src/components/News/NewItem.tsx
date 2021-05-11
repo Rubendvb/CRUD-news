@@ -10,11 +10,12 @@ interface Props {
   loadNews: () => void;
 }
 
-const NewItem = ({ report }: Props) => {
+const NewItem = ({ report, loadNews }: Props) => {
   const history = useHistory();
 
   const handleDelete = async (id: string) => {
     await newsService.deleteNew(id);
+    loadNews();
   };
 
   return (
