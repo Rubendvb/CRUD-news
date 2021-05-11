@@ -2,7 +2,7 @@ export interface Report {
   title: string;
   description: string;
   url: string;
-  updateAt?: string;
-  createdAt?: string;
+  createdAt?: string | Date;
+  updateAt?: string | Date;
   _id?: string;
 }

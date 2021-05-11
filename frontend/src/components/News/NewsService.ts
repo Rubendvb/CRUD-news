@@ -4,7 +4,7 @@ import { Report } from "./News";
 const api = "http://localhost:4000";
 
 export const getNews = async () => {
-  return await axios.get(`${api}/noticias`);
+  return await axios.get<Report[]>(`${api}/noticias`);
 };
 
 export const createNews = async (news: Report) => {
