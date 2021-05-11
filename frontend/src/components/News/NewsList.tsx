@@ -29,7 +29,7 @@ const NewsList = () => {
   return (
     <div className="row">
       {news.map((news) => {
-        return <NewItem news={news} key={news._id} />;
+        return <NewItem report={news} key={news._id} loadNews={loadNews} />;
       })}
     </div>
   );

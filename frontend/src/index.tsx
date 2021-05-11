@@ -21,6 +21,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={NewsList} />
           <Route path="/new-news" component={NewsForm} />
+          <Route path="/update/:id" component={NewsForm} />
         </Switch>
         <ToastContainer />
       </div>
