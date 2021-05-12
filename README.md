@@ -16,7 +16,7 @@ CRUD-news uses a number of open source projects to work properly:
 - [Express](https://expressjs.com/pt-br/) - fast node.js network app framework
 - [MongoDB](https://www.mongodb.com/) database used for this project. Use the database of your choice.
 
-## Installation
+## Installation and project use
 
 CRUD-news requires [Node.js](https://nodejs.org/) v10+ to run.
 
@@ -30,7 +30,7 @@ npm i
 npm run dev
 ```
 
-To start the project...
+In another console start the project...
 
 ```sh
 cd frontend
