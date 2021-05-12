@@ -16,6 +16,7 @@ const NewsForm = () => {
     title: "",
     description: "",
     url: "",
+    date: "",
   };
 
   const [news, setNews] = useState<Report>(initialState);
@@ -43,14 +44,15 @@ const NewsForm = () => {
   const getNew = async (id: string) => {
     const res = await newsService.getNew(id);
 
-    const { title, description, url } = res.data;
-    setNews({ title, description, url });
+    const { title, description, url, date } = res.data;
+    setNews({ title, description, url, date });
   };
 
   useEffect(() => {
     if (params.id) {
       getNew(params.id);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -65,7 +67,7 @@ const NewsForm = () => {
                 <input
                   type="text"
                   name="title"
-                  placeholder="Escreve o título da noticia"
+                  placeholder="Título da notícia"
                   className="form-control"
                   onChange={inputChange}
                   value={news.title}
@@ -75,9 +77,9 @@ const NewsForm = () => {
 
               <div className="form-group pt-2">
                 <input
-                  type="url"
+                  type="text"
                   name="url"
-                  placeholder="https://google.com"
+                  placeholder="Imagen da notícia (url)"
                   className="form-control"
                   onChange={inputChange}
                   value={news.url}
@@ -89,10 +91,21 @@ const NewsForm = () => {
                   name="description"
                   rows={3}
                   className="form-control"
-                  placeholder="Descrição do vídeo"
+                  placeholder="Conteúdo da Notícia"
                   onChange={inputChange}
                   value={news.description}
                 ></textarea>
+              </div>
+
+              <div className="form-group pt-2">
+                <input
+                  type="date"
+                  className="form-control"
+                  name="date"
+                  onChange={inputChange}
+                  placeholder="05/12/1991"
+                  value={news.date}
+                />
               </div>
 
               {params.id ? (

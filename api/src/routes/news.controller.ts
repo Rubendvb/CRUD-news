@@ -23,23 +23,23 @@ export const getNews: RequestHandler = async (req, res) => {
 };
 
 export const getANews: RequestHandler = async (req, res) => {
-  const videoFound = await News.findById(req.params.id);
+  const newsFound = await News.findById(req.params.id);
 
-  if (!videoFound) {
+  if (!newsFound) {
     return res.status(200).json();
   }
 
-  return res.json(videoFound);
+  return res.json(newsFound);
 };
 
 export const deleteNews: RequestHandler = async (req, res) => {
-  const videoFound = await News.findByIdAndDelete(req.params.id);
+  const newsFound = await News.findByIdAndDelete(req.params.id);
 
-  if (!videoFound) {
+  if (!newsFound) {
     return res.status(200).json();
   }
 
-  return res.json(videoFound);
+  return res.json(newsFound);
 };
 
 export const updateNews: RequestHandler = async (req, res) => {

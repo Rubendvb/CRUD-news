@@ -17,6 +17,10 @@ const newsSchema = new Schema(
       trim: true,
       unique: true,
     },
+    date: {
+      type: String,
+      required: true
+    }
   },
   {
     versionKey: false,
