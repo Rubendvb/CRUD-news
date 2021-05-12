@@ -3,6 +3,7 @@
 CRUD-news is an interface that shows news already created by the user that can be edited or deleted.
 
 ![](https://github.com/Rubendvb/CRUD-news/blob/master/frontend/public/img/Screenshot_1.png)
+![](https://github.com/Rubendvb/CRUD-news/blob/master/frontend/public/img/Screenshot_2.png)
 
 ## Tech
 
