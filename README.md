@@ -13,7 +13,7 @@ CRUD-news uses a number of open source projects to work properly:
 - [Bootstrap](https://getbootstrap.com/) - great UI boilerplate for modern web apps
 - [Bootwach](https://bootswatch.com/) - Used for the theme of this project
 - [node.js](http://nodejs.org) - evented I/O for the backend
-- [Express] - fast node.js network app framework
+- [Express](https://expressjs.com/pt-br/) - fast node.js network app framework
 - [MongoDB](https://www.mongodb.com/) database used for this project. Use the database of your choice.
 
 ## Installation
