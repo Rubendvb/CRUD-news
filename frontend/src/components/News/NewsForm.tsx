@@ -60,7 +60,7 @@ const NewsForm = () => {
       <div className="col-md-4 offset-md-4">
         <div className="card">
           <div className="card-body">
-            <h3>Nova Noticia</h3>
+            <h3>Nova Notícia</h3>
 
             <form onSubmit={handleSubmit}>
               <div className="form-group">
@@ -110,10 +110,10 @@ const NewsForm = () => {
 
               {params.id ? (
                 <button className="btn btn-danger mt-2">
-                  Atualizar Noticia
+                  Atualizar Notícia
                 </button>
               ) : (
-                <button className="btn btn-danger mt-2">Criar Noticia</button>
+                <button className="btn btn-danger mt-2">Criar Notícia</button>
               )}
             </form>
           </div>

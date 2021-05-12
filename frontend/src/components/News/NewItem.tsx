@@ -34,7 +34,7 @@ const NewItem = ({ report, loadNews }: Props) => {
           </button>
         </div>
         <img src={report.url} alt="" />
-        <p>{report.description}</p>
+        <p className="pt-2">{report.description}</p>
         <p>Data da publicação: {report.date}</p>
       </div>
     </div>
